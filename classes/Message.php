@@ -13,9 +13,8 @@ class Message{
 	}
 
 	public function renderHtml() {
-		$date = strftime(%d %B %Y %H %M, $this->date);
 		// on veut retourner 
 		// nom date le 23 janvier 2017 heure/min  et le message 
-		return "<h2>{$this->author} a dit : </h2> <p>{$this->content} le <time>{strftime(%d %B %Y %H %M, $this->date)}</time></p>";
+		return "<h2>{$this->author} a dit : </h2> <p>{$this->content} le <time>".strftime("%d %B %Y %H %M", $this->date)."</time></p>";
 	}
 }
